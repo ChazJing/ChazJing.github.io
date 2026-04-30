@@ -318,6 +318,151 @@ body {
     color: #3498db;
 }
 
+/* Markdown 内容样式 */
+.post-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post-header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.post-body {
+    line-height: 1.8;
+    color: #333;
+}
+
+.post-body h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.post-body h2 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin: 1.8rem 0 0.8rem;
+}
+
+.post-body h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin: 1.5rem 0 0.6rem;
+}
+
+.post-body h4 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin: 1.2rem 0 0.5rem;
+}
+
+.post-body p {
+    margin-bottom: 1.2rem;
+}
+
+.post-body strong {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.post-body em {
+    font-style: italic;
+}
+
+.post-body a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.post-body a:hover {
+    text-decoration: underline;
+}
+
+.post-body ul,
+.post-body ol {
+    margin-left: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.post-body li {
+    margin-bottom: 0.5rem;
+}
+
+.post-body code {
+    background: #f5f5f5;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9rem;
+    color: #e74c3c;
+}
+
+.post-body pre {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1.2rem;
+}
+
+.post-body pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+}
+
+.post-body blockquote {
+    border-left: 4px solid #3498db;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: #666;
+    font-style: italic;
+}
+
+.post-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.post-body hr {
+    border: none;
+    border-top: 2px solid #eee;
+    margin: 2rem 0;
+}
+
+.post-tags {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.post-tags .tag {
+    display: inline-block;
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 @media (max-width: 768px) {
     .profile-card,
     .about-section {
