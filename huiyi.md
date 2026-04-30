@@ -1,27 +1,24 @@
 ---
 layout: default
-title: 所有帖子
+title: 回忆
 ---
 
 <div class="posts-container">
-    <h1 class="page-title">所有帖子</h1>
+    <h1 class="page-title">回忆</h1>
     
-    {% for post in site.posts %}
+    {% for post in site.categories["回忆"] %}
     <article class="post-item">
         <h3 class="post-title">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </h3>
         <div class="post-meta">
             <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-            {% if post.categories %}
-            <span class="post-categories">
-                {% for category in post.categories %}
-                <a href="{{ site.baseurl }}/{{ category }}">{{ category }}</a>
-                {% endfor %}
-            </span>
-            {% endif %}
         </div>
         <p class="post-excerpt">{{ post.excerpt }}</p>
     </article>
     {% endfor %}
+    
+    {% if site.categories["回忆"].size == 0 %}
+    <p style="color: #888;">暂无此分类的帖子，敬请期待！</p>
+    {% endif %}
 </div>
