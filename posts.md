@@ -16,7 +16,20 @@ title: 所有帖子
             {% if post.categories %}
             <span class="post-categories">
                 {% for category in post.categories %}
-                <a href="{{ site.baseurl }}/{{ category }}">{{ category }}</a>
+                {% case category %}
+                {% when "经验帖" %}
+                <a href="{{ site.baseurl }}/jingyan">{{ category }}</a>
+                {% when "生活记录" %}
+                <a href="{{ site.baseurl }}/shenghuo">{{ category }}</a>
+                {% when "回忆" %}
+                <a href="{{ site.baseurl }}/huiyi">{{ category }}</a>
+                {% when "随感" %}
+                <a href="{{ site.baseurl }}/suigan">{{ category }}</a>
+                {% when "笑一笑" %}
+                <a href="{{ site.baseurl }}/xiaoyixiao">{{ category }}</a>
+                {% else %}
+                {{ category }}
+                {% endcase %}
                 {% endfor %}
             </span>
             {% endif %}
