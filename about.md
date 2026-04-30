@@ -36,5 +36,24 @@ title: 关于我
             <li><strong>回忆</strong> - 记忆即为永恒</li>
             <li><strong>笑一笑</strong> - 希望留下一些笑容片段</li>
         </ul>
+        
+        <h2>本站搭建历程</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2026.5.1</div>
+                <div class="timeline-content">
+                    <h3>开天辟地</h3>
+                    <ul>
+                        <li>创建 GitHub 仓库，设置域名</li>
+                        <li>搭建网站整体框架（使用 Jekyll）</li>
+                        <li>上传网站并公开访问</li>
+                        <li>创建网站栏目：首页、关于我、经验帖、生活记录、回忆、随感、笑一笑</li>
+                        <li>设置标签和分类超链接跳转</li>
+                        <li>添加黑夜模式功能（支持 localStorage 保存设置）</li>
+                        <li>完善 Markdown 文章样式</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
