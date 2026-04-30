@@ -463,6 +463,126 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* 黑夜模式按钮样式 */
+.dark-mode-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dark-mode-btn:hover {
+    background: #2980b9;
+}
+
+/* 黑夜模式样式 */
+body.dark-mode {
+    background-color: #1a1a2e;
+    color: #eee;
+}
+
+body.dark-mode .site-nav {
+    background-color: #16213e;
+}
+
+body.dark-mode .profile-card,
+body.dark-mode .post-card,
+body.dark-mode .category-card,
+body.dark-mode .posts-container .category-section,
+body.dark-mode .about-container,
+body.dark-mode .post-content {
+    background-color: #16213e;
+    color: #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .profile-info h1,
+body.dark-mode .page-title,
+body.dark-mode .recent-posts h2,
+body.dark-mode .categories-section h2,
+body.dark-mode .category-card h3,
+body.dark-mode .post-card .post-title a,
+body.dark-mode .about-content h2,
+body.dark-mode .about-content h3,
+body.dark-mode .post-title,
+body.dark-mode .post-body h1,
+body.dark-mode .post-body h2,
+body.dark-mode .post-body h3,
+body.dark-mode .post-body h4,
+body.dark-mode .post-body strong {
+    color: #fff;
+}
+
+body.dark-mode .bio,
+body.dark-mode .post-excerpt,
+body.dark-mode .post-count,
+body.dark-mode .post-body,
+body.dark-mode .about-content p,
+body.dark-mode .about-content li {
+    color: #ccc;
+}
+
+body.dark-mode .post-card .post-title a:hover {
+    color: #3498db;
+}
+
+body.dark-mode .contact-links a,
+body.dark-mode .post-body a,
+body.dark-mode .post-categories a {
+    color: #5dade2;
+}
+
+body.dark-mode .dark-mode-btn {
+    background: #e74c3c;
+}
+
+body.dark-mode .dark-mode-btn:hover {
+    background: #c0392b;
+}
+
+body.dark-mode .post-body code {
+    background: #1a1a2e;
+    color: #f1948a;
+}
+
+body.dark-mode .post-body pre {
+    background: #0f0f23;
+}
+
+body.dark-mode .post-body blockquote {
+    color: #aaa;
+    border-left-color: #5dade2;
+}
+
+body.dark-mode .post-tags .tag {
+    background: #1a1a2e;
+    color: #eee;
+}
+
+body.dark-mode .post-item {
+    border-bottom-color: #2c3e50;
+}
+
+body.dark-mode .about-section {
+    border-bottom-color: #2c3e50;
+}
+
+body.dark-mode .post-header {
+    border-bottom-color: #2c3e50;
+}
+
+body.dark-mode .post-tags {
+    border-top-color: #2c3e50;
+}
+
+body.dark-mode .site-footer {
+    background-color: #0f0f23;
+}
+
 @media (max-width: 768px) {
     .profile-card,
     .about-section {
