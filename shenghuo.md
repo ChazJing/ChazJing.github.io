@@ -5,8 +5,10 @@ title: 生活记录
 
 <div class="posts-container">
     <h1 class="page-title">生活记录</h1>
+    <p class="category-desc">当下即所有</p>
     
-    {% for post in site.categories["生活记录"] %}
+    {% for post in site.posts %}
+    {% if post.categories contains '生活记录' %}
     <article class="post-item">
         <h3 class="post-title">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -16,9 +18,17 @@ title: 生活记录
         </div>
         <p class="post-excerpt">{{ post.excerpt }}</p>
     </article>
+    {% endif %}
     {% endfor %}
     
-    {% if site.categories["生活记录"].size == 0 %}
+    {% assign has_posts = false %}
+    {% for post in site.posts %}
+        {% if post.categories contains '生活记录' %}
+            {% assign has_posts = true %}
+        {% endif %}
+    {% endfor %}
+    
+    {% if has_posts == false %}
     <p style="color: #888;">暂无此分类的帖子，敬请期待！</p>
     {% endif %}
 </div>

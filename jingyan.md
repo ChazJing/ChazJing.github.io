@@ -5,8 +5,10 @@ title: 经验帖
 
 <div class="posts-container">
     <h1 class="page-title">经验帖</h1>
+    <p class="category-desc">一点点过来人的路罢了</p>
     
-    {% for post in site.categories["经验帖"] %}
+    {% for post in site.posts %}
+    {% if post.categories contains '经验帖' %}
     <article class="post-item">
         <h3 class="post-title">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -16,9 +18,17 @@ title: 经验帖
         </div>
         <p class="post-excerpt">{{ post.excerpt }}</p>
     </article>
+    {% endif %}
     {% endfor %}
     
-    {% if site.categories["经验帖"].size == 0 %}
+    {% assign has_posts = false %}
+    {% for post in site.posts %}
+        {% if post.categories contains '经验帖' %}
+            {% assign has_posts = true %}
+        {% endif %}
+    {% endfor %}
+    
+    {% if has_posts == false %}
     <p style="color: #888;">暂无此分类的帖子，敬请期待！</p>
     {% endif %}
 </div>
