@@ -10,15 +10,15 @@ title: 关于我
         </div>
         
         <div class="profile-info">
-            <h1>你好，我是 [你的名字]</h1>
-            <p class="bio">[在这里写下你的简介，比如：我是xxx，喜欢探索新技术，喜欢分享学习心得...]</p>
+            <h1>你好，我是 ChazJing</h1>
+            <p class="bio">编程小白，依靠AI在尝试搭建网站。偶尔喜欢写文字。网易云重度选手。</p>
             
             <div class="contact-info">
                 <h2>联系方式</h2>
                 <ul>
-                    <li><strong>邮箱：</strong><a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                    <li><strong>邮箱：</strong><a href="3200101971@zju.edu.cn">3200101971@zju.edu.cn</a></li>
                     <li><strong>GitHub：</strong><a href="https://github.com/{{ site.github_username }}" target="_blank">@{{ site.github_username }}</a></li>
-                    <li><strong>微博：</strong><a href="#">@你的微博名</a></li>
+                    <li><strong>微信公众号：</strong><a href="#">ChazJing</a></li>
                 </ul>
             </div>
         </div>
@@ -26,13 +26,15 @@ title: 关于我
     
     <div class="about-content">
         <h2>关于这个网站</h2>
-        <p>欢迎来到我的个人网站！我在这里分享我的学习经验和生活感悟。</p>
+        <p>欢迎来到我的个人网站！本人没有编程能力，网站全依靠AI搭建，甚至整个步骤都是AI一步步教的，不足之处，敬请谅解！我希望在这里尝试记录我的生活经历。</p>
         
         <h3>网站内容分类</h3>
         <ul>
-            <li><strong>技术分享</strong> - 关于编程和技术的学习笔记</li>
-            <li><strong>生活感悟</strong> - 日常生活的思考和感悟</li>
-            <li><strong>读书笔记</strong> - 读过的书籍总结</li>
+            <li><strong>经验帖</strong> - 一点点过来人的路罢了</li>
+            <li><strong>生活记录</strong> - 当下即所有</li>
+            <li><strong>随感</strong> - 很喜欢碎碎念</li>
+            <li><strong>回忆</strong> - 记忆即为永恒</li>
+            <li><strong>笑一笑</strong> - 希望留下一些笑容片段</li>
         </ul>
     </div>
 </div>
