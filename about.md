@@ -42,8 +42,8 @@ title: 关于我
             <div class="timeline-item">
                 <div class="timeline-date">2026.5.1</div>
                 <div class="timeline-content">
-                    <h3>开天辟地</h3>
                     <ul>
+                        <li>开天辟地！</li>
                         <li>创建 GitHub 仓库，设置域名</li>
                         <li>搭建网站整体框架（使用 Jekyll）</li>
                         <li>上传网站并公开访问</li>
