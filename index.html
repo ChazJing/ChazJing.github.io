@@ -1,0 +1,72 @@
+---
+layout: default
+title: 首页
+---
+
+<div class="home-container">
+    <section class="intro-section">
+        <div class="profile-card">
+            <div class="profile-photo">
+                <!-- 👇 这里是你需要放置照片的地方 -->
+                <!-- 1. 把你的照片放到 assets/images/ 目录下，命名为 photo.jpg -->
+                <!-- 2. 取消下面这行注释，删除 img 标签 -->
+                <img src="{{ "/assets/images/photo.jpg" | relative_url }}" alt="我的照片">
+            </div>
+            
+            <div class="profile-info">
+                <h1>欢迎来到我的网站</h1>
+                <p class="bio">[在这里写下你的个人简介，让访客了解你是谁]</p>
+                
+                <div class="contact-links">
+                    <h3>联系方式</h3>
+                    <ul>
+                        <!-- 👇 修改下面的邮箱地址为你的真实邮箱 -->
+                        <li>📧 邮箱：<a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                        <!-- 👇 修改下面的 GitHub 用户名为你的真实用户名 -->
+                        <li>💻 GitHub：<a href="https://github.com/{{ site.github_username }}">@{{ site.github_username }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="recent-posts">
+        <h2>最新帖子</h2>
+        <div class="posts-grid">
+            {% for post in site.posts limit:6 %}
+            <article class="post-card">
+                <h3 class="post-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h3>
+                <div class="post-meta">
+                    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                    {% if post.categories %}
+                    <span class="post-categories">
+                        {% for category in post.categories %}
+                        <span class="category-tag">{{ category }}</span>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </div>
+                <p class="post-excerpt">{{ post.excerpt }}</p>
+            </article>
+            {% endfor %}
+        </div>
+        
+        <div class="view-all">
+            <a href="{{ "/posts" | relative_url }}" class="btn">查看所有帖子 →</a>
+        </div>
+    </section>
+    
+    <section class="categories-section">
+        <h2>帖子分类</h2>
+        <div class="categories-grid">
+            {% for category in site.categories %}
+            <a href="{{ "/posts" | relative_url }}#{{ category[0] }}" class="category-card">
+                <h3>{{ category[0] }}</h3>
+                <span class="post-count">{{ category[1].size }} 篇帖子</span>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+</div>
