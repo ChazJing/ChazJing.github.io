@@ -2,7 +2,7 @@
 layout: post
 title: 孤独的歌
 date: 2025-06-01
-categories: []
+categories: [随感]
 tags: [随感]
 excerpt: 一首孤独的歌分享
 ---
