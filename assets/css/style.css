@@ -583,6 +583,83 @@ body.dark-mode .site-footer {
     background-color: #0f0f23;
 }
 
+/* 时间轴样式 */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #3498db;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -3rem;
+    top: 0.3rem;
+    width: 15px;
+    height: 15px;
+    background: #3498db;
+    border-radius: 50%;
+    transform: translateX(-6px);
+}
+
+.timeline-date {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content ul {
+    margin-left: 1.5rem;
+    color: #555;
+}
+
+.timeline-content li {
+    margin-bottom: 0.3rem;
+}
+
+/* 黑夜模式下的时间轴 */
+body.dark-mode .timeline::before {
+    background: #5dade2;
+}
+
+body.dark-mode .timeline-item::before {
+    background: #5dade2;
+}
+
+body.dark-mode .timeline-date {
+    color: #5dade2;
+}
+
+body.dark-mode .timeline-content h3 {
+    color: #fff;
+}
+
+body.dark-mode .timeline-content ul {
+    color: #ccc;
+}
+
 @media (max-width: 768px) {
     .profile-card,
     .about-section {
