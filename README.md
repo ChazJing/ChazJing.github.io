@@ -1,2 +1,2 @@
 # ChazJing.github.io
-我的小站
+一个不知道做什么的网站
