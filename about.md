@@ -51,6 +51,7 @@ title: 关于我
                         <li>设置标签和分类超链接跳转</li>
                         <li>添加黑夜模式功能（支持 localStorage 保存设置）</li>
                         <li>完善 Markdown 文章样式</li>
+                        <li>添加对手机页面的适配</li>
                     </ul>
                 </div>
             </div>
