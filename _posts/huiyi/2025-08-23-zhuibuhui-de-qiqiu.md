@@ -3,7 +3,7 @@ layout: post
 title: 追不回的气球
 date: 2025-08-23
 categories: [回忆]
-tags: []
+tags: [回忆]
 excerpt: 一段关于童年、气球和失去的回忆
 ---
 
