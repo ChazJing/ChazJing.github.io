@@ -614,6 +614,30 @@ body.dark-mode .site-footer {
     background-color: #0f0f23;
 }
 
+body.dark-mode .posts-container .post-item .post-title a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .posts-container .post-item .post-title a:hover {
+    color: #5dade2;
+}
+
+body.dark-mode .toc-wrapper {
+    background: #16213e;
+}
+
+body.dark-mode .toc-title {
+    color: #fff;
+}
+
+body.dark-mode .toc-link {
+    color: #ccc;
+}
+
+body.dark-mode .toc-link:hover {
+    color: #5dade2;
+}
+
 /* 时间轴样式 */
 .timeline {
     position: relative;
@@ -928,6 +952,16 @@ body.dark-mode .timeline-content ul {
     
     body.dark-mode .mobile-toc-toggle {
         background: #5dade2;
+    }
+    
+    .post-sidebar {
+        display: block;
+    }
+    
+    .mobile-toc-toggle,
+    .mobile-toc-overlay,
+    .mobile-toc-sidebar {
+        display: none;
     }
 }
 
