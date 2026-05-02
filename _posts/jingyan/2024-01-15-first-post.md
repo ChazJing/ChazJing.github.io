@@ -2,9 +2,8 @@
 layout: post
 title: 我的第一篇博客文章
 date: 2024-01-15
-categories: [经验帖, 学习笔记]
-tags: [博客, 入门]
-excerpt: 这是AI生成的测试文件，无实际用途
+categories: 经验帖
+excerpt: 这是我的第一篇博客文章，用来测试网站功能。在这里我会分享我的学习心得和生活感悟。
 ---
 
 # 欢迎来到我的博客

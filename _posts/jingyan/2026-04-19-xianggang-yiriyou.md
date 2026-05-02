@@ -2,9 +2,8 @@
 layout: post
 title: 香港一日游
 date: 2026-04-19
-categories: [经验帖]
-tags: [经验帖]
-excerpt: 半日游的游记、攻略分享
+categories: 经验帖
+excerpt: 半日游的游记、攻略分享，独自一人从珠海出发，关键词：少消费、多打卡、暴走版。
 ---
 
 ## **香港一日游**

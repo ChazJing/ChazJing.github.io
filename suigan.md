@@ -16,9 +16,7 @@ title: 随感
         <div class="post-meta">
             <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
         </div>
-        {% if post.excerpt != post.title %}
-        <p class="post-excerpt">{{ post.excerpt }}</p>
-        {% endif %}
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>
     </article>
     {% endif %}
     {% endfor %}
