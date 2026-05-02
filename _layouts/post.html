@@ -9,6 +9,18 @@
 <body>
     {% include header.html %}
     
+    <button class="mobile-toc-toggle" id="mobile-toc-toggle" aria-label="目录">
+        ☰
+    </button>
+    
+    <div class="mobile-toc-overlay" id="mobile-toc-overlay"></div>
+    <aside class="mobile-toc-sidebar" id="mobile-toc-sidebar">
+        <div class="mobile-toc-wrapper">
+            <h3 class="toc-title">目录</h3>
+            <div id="mobile-toc"></div>
+        </div>
+    </aside>
+    
     <main class="main-content post-layout">
         <article class="post-content">
             <header class="post-header">
