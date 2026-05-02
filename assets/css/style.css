@@ -867,54 +867,67 @@ body.dark-mode .timeline-content ul {
     }
     
     .post-sidebar {
-        order: -1;
+        display: none;
     }
     
-    .toc-toggle {
+    .mobile-toc-toggle {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         background: #3498db;
         color: white;
         border: none;
-        border-radius: 6px;
+        border-radius: 50%;
         cursor: pointer;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1001;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     
-    .toc-wrapper {
+    .mobile-toc-overlay {
         display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 0;
         left: 0;
         right: 0;
-        z-index: 100;
-        background: white;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        max-height: 300px;
-        overflow-y: auto;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 1000;
     }
     
-    .toc-wrapper.active {
+    .mobile-toc-overlay.active {
         display: block;
     }
     
-    body.dark-mode .toc-wrapper {
+    .mobile-toc-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 33.333%;
+        background: white;
+        z-index: 1002;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+        padding: 1rem;
+    }
+    
+    .mobile-toc-sidebar.active {
+        transform: translateX(0);
+    }
+    
+    body.dark-mode .mobile-toc-sidebar {
         background: #16213e;
     }
     
-    body.dark-mode .toc-title {
-        color: #fff;
-    }
-    
-    body.dark-mode .toc-link {
-        color: #ccc;
-    }
-    
-    body.dark-mode .toc-link:hover {
-        color: #5dade2;
+    body.dark-mode .mobile-toc-toggle {
+        background: #5dade2;
     }
 }
 
