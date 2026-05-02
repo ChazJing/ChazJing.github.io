@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.getElementById('nav-menu');
     const tocToggle = document.getElementById('toc-toggle');
     const tocWrapper = document.getElementById('toc-wrapper');
+    const mobileTocToggle = document.getElementById('mobile-toc-toggle');
+    const mobileTocSidebar = document.getElementById('mobile-toc-sidebar');
+    const mobileTocOverlay = document.getElementById('mobile-toc-overlay');
     
     if (localStorage.getItem('darkMode') === 'true') {
         document.body.classList.add('dark-mode');
@@ -49,6 +52,29 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!tocWrapper.contains(e.target) && !tocToggle.contains(e.target)) {
                 tocWrapper.classList.remove('active');
             }
+        });
+    }
+    
+    function closeMobileTOC() {
+        if (mobileTocSidebar) mobileTocSidebar.classList.remove('active');
+        if (mobileTocOverlay) mobileTocOverlay.classList.remove('active');
+    }
+    
+    if (mobileTocToggle) {
+        mobileTocToggle.addEventListener('click', function() {
+            if (mobileTocSidebar) mobileTocSidebar.classList.toggle('active');
+            if (mobileTocOverlay) mobileTocOverlay.classList.toggle('active');
+        });
+    }
+    
+    if (mobileTocOverlay) {
+        mobileTocOverlay.addEventListener('click', closeMobileTOC);
+    }
+    
+    if (mobileTocSidebar) {
+        const tocLinks = mobileTocSidebar.querySelectorAll('a');
+        tocLinks.forEach(link => {
+            link.addEventListener('click', closeMobileTOC);
         });
     }
 });
