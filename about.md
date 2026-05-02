@@ -16,9 +16,10 @@ title: 关于我
             <div class="contact-info">
                 <h2>联系方式</h2>
                 <ul>
-                    <li><strong>邮箱：</strong><a href="3200101971@zju.edu.cn">3200101971@zju.edu.cn</a></li>
+                    <li><strong>邮箱：</strong><a href="mailto:3200101971@zju.edu.cn">3200101971@zju.edu.cn</a></li>
                     <li><strong>GitHub：</strong><a href="https://github.com/{{ site.github_username }}" target="_blank">@{{ site.github_username }}</a></li>
                     <li><strong>微信公众号：</strong><a href="#">ChazJing</a></li>
+                    <li><strong>个人域名：</strong><a href="https://chazjing.icu/" target="_blank">https://chazjing.icu/</a></li>
                 </ul>
             </div>
         </div>
@@ -40,18 +41,27 @@ title: 关于我
         <h2>本站搭建历程</h2>
         <div class="timeline">
             <div class="timeline-item">
+                <div class="timeline-date">2026.5.2</div>
+                <div class="timeline-content">
+                    <h3>域名申请</h3>
+                    <ul>
+                        <li>成功申请个人域名 https://chazjing.icu/</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
                 <div class="timeline-date">2026.5.1</div>
                 <div class="timeline-content">
+                    <h3>开天辟地</h3>
                     <ul>
-                        <li>开天辟地！</li>
                         <li>创建 GitHub 仓库，设置域名</li>
-                        <li>搭建网站整体框架</li>
+                        <li>搭建网站整体框架（使用 Jekyll）</li>
                         <li>上传网站并公开访问</li>
                         <li>创建网站栏目：首页、关于我、经验帖、生活记录、回忆、随感、笑一笑</li>
                         <li>设置标签和分类超链接跳转</li>
-                        <li>添加黑夜模式功能</li>
+                        <li>添加黑夜模式功能（支持 localStorage 保存设置）</li>
                         <li>完善 Markdown 文章样式</li>
-                        <li>添加对手机页面的适配</li>
+                        <li>完成移动端适配（汉堡菜单）</li>
                     </ul>
                 </div>
             </div>
