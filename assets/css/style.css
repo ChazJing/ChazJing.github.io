@@ -844,6 +844,13 @@ body.dark-mode .timeline-content ul {
     overflow-y: auto;
 }
 
+/* 移动端目录 - 桌面端默认隐藏 */
+.mobile-toc-toggle,
+.mobile-toc-overlay,
+.mobile-toc-sidebar {
+    display: none;
+}
+
 .toc-title {
     font-size: 1rem;
     color: #2c3e50;
