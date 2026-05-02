@@ -953,16 +953,6 @@ body.dark-mode .timeline-content ul {
     body.dark-mode .mobile-toc-toggle {
         background: #5dade2;
     }
-    
-    .post-sidebar {
-        display: block;
-    }
-    
-    .mobile-toc-toggle,
-    .mobile-toc-overlay,
-    .mobile-toc-sidebar {
-        display: none;
-    }
 }
 
 @media (max-width: 768px) {
