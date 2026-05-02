@@ -16,7 +16,9 @@ title: 经验帖
         <div class="post-meta">
             <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
         </div>
+        {% if post.excerpt != post.title %}
         <p class="post-excerpt">{{ post.excerpt }}</p>
+        {% endif %}
     </article>
     {% endif %}
     {% endfor %}
