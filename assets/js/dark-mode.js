@@ -77,4 +77,37 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', closeMobileTOC);
         });
     }
+
+    // 点击粒子效果
+    document.addEventListener('click', function(e) {
+        const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6'];
+        const particleCount = 6;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'click-particle';
+            
+            const size = Math.random() * 8 + 4;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const angle = (Math.PI * 2 * i) / particleCount;
+            const distance = Math.random() * 50 + 30;
+            
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.backgroundColor = color;
+            particle.style.left = e.clientX - size / 2 + 'px';
+            particle.style.top = e.clientY - size / 2 + 'px';
+            
+            const endX = Math.cos(angle) * distance;
+            const endY = Math.sin(angle) * distance;
+            particle.style.setProperty('--end-x', endX + 'px');
+            particle.style.setProperty('--end-y', endY + 'px');
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 300);
+        }
+    });
 });

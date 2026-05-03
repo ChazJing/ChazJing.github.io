@@ -9,6 +9,31 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f5f5f5;
+    cursor: grab;
+}
+
+body:active {
+    cursor: grabbing;
+}
+
+/* 点击粒子效果 */
+.click-particle {
+    position: fixed;
+    pointer-events: none;
+    border-radius: 50%;
+    animation: particle-burst 0.3s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes particle-burst {
+    0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--end-x, 50px), var(--end-y, 50px)) scale(1);
+        opacity: 0;
+    }
 }
 
 .site-nav {
