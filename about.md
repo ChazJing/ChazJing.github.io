@@ -41,6 +41,17 @@ title: 关于我
         <h2>本站搭建历程</h2>
         <div class="timeline">
             <div class="timeline-item">
+                <div class="timeline-date">2026.5.3</div>
+                <div class="timeline-content">
+                    <h3>交互体验优化</h3>
+                    <ul>
+                        <li>添加文章目录功能（桌面端右侧显示，移动端点击按钮显示）</li>
+                        <li>修改鼠标光标为抓取手势</li>
+                        <li>添加点击粒子效果</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
                 <div class="timeline-date">2026.5.2</div>
                 <div class="timeline-content">
                     <h3>域名申请</h3>
