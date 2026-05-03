@@ -936,6 +936,7 @@ body.dark-mode .timeline-content ul {
     }
     
     .mobile-toc-sidebar {
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
