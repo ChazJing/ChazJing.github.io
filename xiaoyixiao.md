@@ -16,7 +16,7 @@ title: 笑一笑
         <div class="post-meta">
             <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
         </div>
-        <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+        <p class="post-excerpt"><a href="{{ post.url | relative_url }}">{{ post.excerpt | strip_html | truncate: 100 }}</a></p>
     </article>
     {% endif %}
     {% endfor %}
