@@ -1,5 +1,6 @@
 ---
 layout: default
+section: literature
 title: 随感
 ---
 
@@ -29,6 +30,6 @@ title: 随感
     {% endfor %}
     
     {% if has_posts == false %}
-    <p style="color: #888;">暂无此分类的帖子，敬请期待！</p>
+    <p style="color: #888;">这一页还在等待新的文字，敬请期待。</p>
     {% endif %}
 </div>

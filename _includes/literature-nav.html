@@ -1,0 +1,8 @@
+<nav class="literature-nav" aria-label="文学作品集分类">
+    <a href="{{ '/about' | relative_url }}"{% if page.url == '/about' %} aria-current="page"{% endif %}>作品集首页</a>
+    <a href="{{ '/posts' | relative_url }}"{% if page.name == 'posts.md' %} aria-current="page"{% endif %}>全部作品</a>
+    {% for category in site.data.literature %}
+    {% assign category_file = category.url | remove_first: '/' | append: '.md' %}
+    <a href="{{ category.url | relative_url }}"{% if page.name == category_file %} aria-current="page"{% endif %}>{{ category.title }}</a>
+    {% endfor %}
+</nav>

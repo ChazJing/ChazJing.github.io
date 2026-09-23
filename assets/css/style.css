@@ -988,4 +988,22 @@ body.dark-mode .timeline-content ul {
     }
 }
 
-@media (max-width: 768px) {
+/* 文学作品集：主栏目之下的分类导航 */
+.literature-nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #d9e1e8; }
+.literature-nav a { color: #40586c; text-decoration: none; padding: .5rem .8rem; border-radius: 6px; font-size: .95rem; }
+.literature-nav a:hover, .literature-nav a[aria-current="page"] { color: #fff; background: #2c3e50; }
+.nav-menu a[aria-current] { text-decoration: underline; text-underline-offset: .45rem; }
+.collection-eyebrow { color: #526c7d; font-size: .8rem; letter-spacing: .14em; margin-bottom: .7rem; }
+.collection-intro { font-size: 1.15rem; line-height: 1.9; margin-bottom: 1rem; }
+.collection-note { color: #626f7b; font-size: .95rem; margin-bottom: 1rem; }
+.literature-home .profile-card { border-top: 3px solid #597687; }
+.literature-home .category-card { display: flex; flex-direction: column; }
+.literature-home .category-card .post-count { margin-top: auto; }
+a:focus-visible, button:focus-visible { outline: 3px solid #3498db; outline-offset: 4px; }
+body.dark-mode .literature-nav { border-color: #465269; }
+body.dark-mode .literature-nav a, body.dark-mode .collection-note, body.dark-mode .collection-eyebrow { color: #c4d1df; }
+body.dark-mode .literature-nav a:hover, body.dark-mode .literature-nav a[aria-current="page"] { background: #40586c; color: #fff; }
+@media (max-width: 768px) { .literature-nav { gap: .25rem; } .literature-nav a { padding: .6rem; } }
+
+.literature-home .post-excerpt a { color: inherit; text-decoration: none; }
+.literature-home .post-excerpt a:hover { text-decoration: underline; }
