@@ -32,12 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.addEventListener('click', function() {
             this.classList.toggle('active');
             navMenu.classList.toggle('active');
+            this.setAttribute('aria-expanded', String(navMenu.classList.contains('active')));
         });
         
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
                 navMenu.classList.remove('active');
             });
         });

@@ -10,6 +10,7 @@
     {% include header.html %}
     
     <main class="main-content">
+        {% if page.section == 'literature' %}{% include literature-nav.html %}{% endif %}
         {{ content }}
     </main>
     

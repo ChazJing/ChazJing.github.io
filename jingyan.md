@@ -1,10 +1,11 @@
 ---
 layout: default
-title: 经验帖
+section: literature
+title: 攻略与经验
 ---
 
 <div class="posts-container">
-    <h1 class="page-title">经验帖</h1>
+    <h1 class="page-title">攻略与经验</h1>
     <p class="category-desc">一点点过来人的路罢了</p>
     
     {% for post in site.posts %}
@@ -29,6 +30,6 @@ title: 经验帖
     {% endfor %}
     
     {% if has_posts == false %}
-    <p style="color: #888;">暂无此分类的帖子，敬请期待！</p>
+    <p style="color: #888;">这一页还在等待新的文字，敬请期待。</p>
     {% endif %}
 </div>

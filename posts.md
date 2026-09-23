@@ -1,10 +1,11 @@
 ---
 layout: default
-title: 所有帖子
+section: literature
+title: 全部作品
 ---
 
 <div class="posts-container">
-    <h1 class="page-title">所有帖子</h1>
+    <h1 class="page-title">全部作品</h1>
     
     {% for post in site.posts %}
     <article class="post-item">
@@ -34,7 +35,7 @@ title: 所有帖子
             </span>
             {% endif %}
         </div>
-        <p class="post-excerpt">{{ post.excerpt }}</p>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
     </article>
     {% endfor %}
 </div>
