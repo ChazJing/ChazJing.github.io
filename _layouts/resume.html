@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="郑时景的个人经历：浙江大学教育背景、实习实践、校园服务与文学作品集。">
+<title>{{ page.title }}</title>
+<link rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url }}">
+<script src="{{ '/assets/js/resume.js' | relative_url }}" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳转到正文</a>
+<div class="ambient" aria-hidden="true"><i></i><i></i></div>
+<div class="pointer-light" aria-hidden="true"></div>
+<div class="reading-progress" aria-hidden="true"></div>
+<nav class="resume-nav" aria-label="主导航"><a class="brand" href="{{ '/' | relative_url }}">郑时景<span>CHAZJING</span></a><div><a href="{{ '/' | relative_url }}" aria-current="page">个人经历</a><a href="{{ '/about' | relative_url }}">文学作品集 ↗</a><button id="motion-toggle" type="button" aria-pressed="false">暂停动效</button></div></nav>
+<nav class="chapter-nav" aria-label="经历章节"><a href="#intro" aria-label="个人介绍" aria-current="location"><span>01</span></a><a href="#education" aria-label="教育背景"><span>02</span></a><a href="#practice" aria-label="实习实践"><span>03</span></a><a href="#campus" aria-label="校园经历"><span>04</span></a><a href="#honors" aria-label="荣誉奖项"><span>05</span></a><a href="#contact" aria-label="能力与联系"><span>06</span></a></nav>
+<main id="main">{{ content }}</main>
+</body>
+</html>

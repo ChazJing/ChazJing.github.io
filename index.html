@@ -1,94 +1,44 @@
 ---
-layout: default
-title: 首页
+layout: resume
+title: 郑时景 · 个人经历
 ---
-
-<div class="home-container">
-    <section class="intro-section">
-        <div class="profile-card">
-            <div class="profile-photo">
-                <img src="{{ "/assets/images/photo.jpg" | relative_url }}" alt="我的照片">
-            </div>
-            
-            <div class="profile-info">
-                <h1>欢迎来到我的小窝</h1>
-                <p class="bio">一个编程小白正在依靠AI搭建网站｜<a href="https://chazjing.icu/" target="_blank">https://chazjing.icu/</a></p>
-                
-                <div class="contact-links">
-                    <h3>联系方式</h3>
-                    <ul>
-                        <li>📧 邮箱：<a href="mailto:chazjing2020@163.com">chazjing2020@163.com</a></li>
-                        <li>💻 GitHub：<a href="https://github.com/{{ site.github_username }}">@{{ site.github_username }}</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="categories-section">
-        <h2>网站栏目</h2>
-        <div class="categories-grid">
-            <a href="{{ "/jingyan" | relative_url }}" class="category-card">
-                <h3>经验帖</h3>
-                <span class="post-count">{% if site.categories["经验帖"] %}{{ site.categories["经验帖"].size }}{% else %}0{% endif %} 篇帖子</span>
-            </a>
-            <a href="{{ "/shenghuo" | relative_url }}" class="category-card">
-                <h3>生活记录</h3>
-                <span class="post-count">{% if site.categories["生活记录"] %}{{ site.categories["生活记录"].size }}{% else %}0{% endif %} 篇帖子</span>
-            </a>
-            <a href="{{ "/huiyi" | relative_url }}" class="category-card">
-                <h3>回忆</h3>
-                <span class="post-count">{% if site.categories["回忆"] %}{{ site.categories["回忆"].size }}{% else %}0{% endif %} 篇帖子</span>
-            </a>
-            <a href="{{ "/suigan" | relative_url }}" class="category-card">
-                <h3>随感</h3>
-                <span class="post-count">{% if site.categories["随感"] %}{{ site.categories["随感"].size }}{% else %}0{% endif %} 篇帖子</span>
-            </a>
-            <a href="{{ "/xiaoyixiao" | relative_url }}" class="category-card">
-                <h3>笑一笑</h3>
-                <span class="post-count">{% if site.categories["笑一笑"] %}{{ site.categories["笑一笑"].size }}{% else %}0{% endif %} 篇帖子</span>
-            </a>
-        </div>
-    </section>
-    
-    <section class="recent-posts">
-        <h2>最新帖子</h2>
-        <div class="posts-grid">
-            {% for post in site.posts limit:6 %}
-            <article class="post-card">
-                <h3 class="post-title">
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                </h3>
-                <div class="post-meta">
-                    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-                    {% if post.categories %}
-                    <span class="post-categories">
-                        {% for category in post.categories %}
-                        {% case category %}
-                        {% when "经验帖" %}
-                        <a href="{{ site.baseurl }}/jingyan">{{ category }}</a>
-                        {% when "生活记录" %}
-                        <a href="{{ site.baseurl }}/shenghuo">{{ category }}</a>
-                        {% when "回忆" %}
-                        <a href="{{ site.baseurl }}/huiyi">{{ category }}</a>
-                        {% when "随感" %}
-                        <a href="{{ site.baseurl }}/suigan">{{ category }}</a>
-                        {% when "笑一笑" %}
-                        <a href="{{ site.baseurl }}/xiaoyixiao">{{ category }}</a>
-                        {% else %}
-                        {{ category }}
-                        {% endcase %}
-                        {% endfor %}
-                    </span>
-                    {% endif %}
-                </div>
-                <p class="post-excerpt"><a href="{{ post.url | relative_url }}">{{ post.excerpt }}</a></p>
-            </article>
-            {% endfor %}
-        </div>
-        
-        <div class="view-all">
-            <a href="{{ "/posts" | relative_url }}" class="btn">查看所有帖子 →</a>
-        </div>
-    </section>
-</div>
+<section class="chapter hero" id="intro" aria-labelledby="intro-title">
+  <div class="hero-landscape" aria-hidden="true"><div class="sun"></div><div class="ridge ridge-back"></div><div class="ridge ridge-front"></div><div class="landscape-caption">山水之间，步履不停。</div></div>
+  <div class="chapter-inner hero-content">
+    <p class="eyebrow reveal">CHAZJING / PERSONAL JOURNEY</p>
+    <h1 id="intro-title" class="reveal">郑时景<span>在经历中成长，<br>在行动中回答。</span></h1>
+    <p class="hero-copy reveal">浙江大学农艺与种业硕士研究生在读。<br>从校园服务走向社会实践，认真整理信息，耐心协调事务，也用文字记录沿途的生活。</p>
+    <div class="hero-tags reveal"><span>浙江大学</span><span>2027 届硕士</span><span>求职方向 · 管理培训生</span></div>
+    <a class="text-link reveal" href="#education">翻开我的经历 <span aria-hidden="true">↓</span></a>
+  </div>
+  <div class="hero-bottom"><span>广东廉江 · 浙江杭州</span><a href="#education">向下探索 ↓</a><span>01 / 06</span></div>
+</section>
+<section class="chapter paper" id="education" aria-labelledby="education-title">
+  <div class="chapter-inner">
+    <header class="section-heading reveal"><p class="eyebrow">02 / EDUCATION</p><h2 id="education-title">求知，是一段<br><em>不断延伸的旅程。</em></h2><p>从农学本科到农艺与种业硕士，在专业学习与真实世界之间，寻找更宽阔的视野。</p></header>
+    <div class="education-list">{% for item in site.data.resume.education %}<article class="education-item reveal"><div><p class="date">{{ item.date }}</p><p class="degree">{{ item.degree }}</p></div><div><h3>{{ item.school }}</h3><p>{{ item.description }}</p><ul class="facts">{% for fact in item.facts %}<li>{{ fact }}</li>{% endfor %}</ul></div></article>{% endfor %}</div>
+  </div>
+</section>
+<section class="chapter ink" id="practice" aria-labelledby="practice-title">
+  <div class="chapter-inner">
+    <header class="section-heading reveal"><p class="eyebrow">03 / FIELD EXPERIENCE</p><h2 id="practice-title">走到现场，<br><em>把事情做具体。</em></h2><p>在政府部门、招生一线和乡村实践中，将任务转化为可以交付的成果。</p></header>
+    <div class="practice-list">{% for item in site.data.resume.practice %}<article class="practice-item reveal glow-card"><div class="practice-number"><strong{% if forloop.first %} data-count="300"{% endif %}>{{ item.number }}</strong><span>{{ item.unit }}</span></div><div class="practice-body"><p class="date">{{ item.date }} · {{ item.tag }}</p><h3>{{ item.title }}</h3><p class="org">{{ item.org }}</p><p>{{ item.text }}</p><p>{{ item.detail }}</p></div></article>{% endfor %}</div>
+  </div>
+</section>
+<section class="chapter paper" id="campus" aria-labelledby="campus-title">
+  <div class="chapter-inner">
+    <header class="section-heading reveal"><p class="eyebrow">04 / CAMPUS & COMMUNITY</p><h2 id="campus-title">在集体里，<br><em>成为可靠的一环。</em></h2><p>学生事务、内容写作、朋辈支持。不同角色背后，是持续的参与和具体的责任。</p></header>
+    <div class="campus-grid">{% for item in site.data.resume.campus %}<article class="campus-item reveal"><p class="date">{{ item.date }}</p><h3>{{ item.title }}</h3><p class="role">{{ item.role }}</p><p>{{ item.text }}</p><span class="card-tag">{{ item.tag }}</span></article>{% endfor %}</div>
+  </div>
+</section>
+<section class="chapter ink honors-section" id="honors" aria-labelledby="honors-title">
+  <div class="chapter-inner honors-grid"><header class="section-heading reveal"><p class="eyebrow">05 / RECOGNITION</p><h2 id="honors-title">每一份认可，<br><em>都是来路的回声。</em></h2><p>感谢被看见的努力，也珍惜与团队共同完成的事情。</p><span class="honors-mark" aria-hidden="true">✳</span></header><div class="honor-list">{% for item in site.data.resume.honors %}<article class="honor-item reveal"><span class="honor-year">{{ item.year }}</span><div><span class="honor-type">{{ item.type }}</span><h3>{{ item.text }}</h3></div></article>{% endfor %}</div></div>
+</section>
+<section class="chapter paper" id="contact" aria-labelledby="contact-title">
+  <div class="chapter-inner">
+    <header class="section-heading reveal"><p class="eyebrow">06 / NEXT CHAPTER</p><h2 id="contact-title">带着积累，<br><em>走向下一段经历。</em></h2><p>善于搜集与梳理信息、协调事务，注重执行与反馈。愿意在新任务中快速学习，将要求转化为具体成果。</p></header>
+    <div class="strength-grid">{% for item in site.data.resume.strengths %}<article class="reveal"><span class="eyebrow">0{{ forloop.index }}</span><h3>{{ item.title }}</h3><p>{{ item.text }}</p></article>{% endfor %}</div>
+    <div class="contact-panel reveal"><div><p class="eyebrow">LET'S CONNECT</p><h3>期待与你交流。</h3><a class="email-link" href="mailto:zhengshijing@zju.edu.cn">zhengshijing@zju.edu.cn ↗</a></div><div><p>工作之外，我也喜欢写作。<br>那些关于生活、回忆与旅途的文字，放在这里。</p><a class="button-link" href="{{ '/about' | relative_url }}">进入文学作品集 ↗</a></div></div>
+    <footer class="resume-footer"><span>© {{ site.time | date: '%Y' }} 郑时景 · ChazJing</span><a href="#intro">回到开篇 ↑</a></footer>
+  </div>
+</section>
