@@ -13,8 +13,22 @@
 <div class="ambient" aria-hidden="true"><i></i><i></i></div>
 <div class="pointer-light" aria-hidden="true"></div>
 <div class="reading-progress" aria-hidden="true"></div>
-<nav class="resume-nav" aria-label="主导航"><a class="brand" href="{{ '/' | relative_url }}">郑时景<span>CHAZJING</span></a><div><a href="{{ '/' | relative_url }}" aria-current="page">个人经历</a><a href="{{ '/about' | relative_url }}">文学作品集 ↗</a><button id="motion-toggle" type="button" aria-pressed="false">暂停动效</button></div></nav>
-<nav class="chapter-nav" aria-label="经历章节"><a href="#intro" aria-label="个人介绍" aria-current="location"><span>01</span></a><a href="#education" aria-label="教育背景"><span>02</span></a><a href="#practice" aria-label="实习实践"><span>03</span></a><a href="#campus" aria-label="校园经历"><span>04</span></a><a href="#honors" aria-label="荣誉奖项"><span>05</span></a><a href="#contact" aria-label="能力与联系"><span>06</span></a></nav>
+<nav class="resume-nav" aria-label="主导航">
+<a class="brand" href="{{ '/' | relative_url }}">郑时景<span>CHAZJING</span></a>
+<button class="resume-menu-toggle" type="button" aria-expanded="false" aria-controls="resume-menu" aria-label="展开导航"><span aria-hidden="true">☰</span> 目录</button>
+<div class="resume-menu" id="resume-menu"><details class="journey-menu"><summary>个人经历 <span aria-hidden="true">⌄</span></summary><div class="journey-links" aria-label="个人经历章节"><a href="#intro"><span>基本信息</span></a>
+<a href="#education"><span>教育经历</span></a>
+<a href="#practice"><span>实习实践</span></a>
+<a href="#campus"><span>校园经历</span></a>
+<a href="#honors"><span>所获荣誉</span></a>
+<a href="#contact"><span>个人评价</span></a></div></details><a href="{{ '/about' | relative_url }}">文学作品集 ↗</a><button id="motion-toggle" type="button" aria-pressed="false">暂停动效</button></div>
+</nav>
+<nav class="chapter-nav" aria-label="经历章节"><a href="#intro"><span class="chapter-number">01</span><span>基本信息</span></a>
+<a href="#education"><span class="chapter-number">02</span><span>教育经历</span></a>
+<a href="#practice"><span class="chapter-number">03</span><span>实习实践</span></a>
+<a href="#campus"><span class="chapter-number">04</span><span>校园经历</span></a>
+<a href="#honors"><span class="chapter-number">05</span><span>所获荣誉</span></a>
+<a href="#contact"><span class="chapter-number">06</span><span>个人评价</span></a></nav>
 <main id="main">{{ content }}</main>
 </body>
 </html>
