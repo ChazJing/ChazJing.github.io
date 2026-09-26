@@ -1,5 +1,27 @@
 (() => {
   const root = document.documentElement;
+  root.classList.add('js-nav');
+  const nav = document.querySelector('.resume-nav');
+  const menuButton = document.querySelector('.resume-menu-toggle');
+  const menu = document.getElementById('resume-menu');
+  function closeMenu(returnFocus = false) {
+    menu.classList.remove('is-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', '展开导航');
+    nav.querySelectorAll('details').forEach(item => item.open = false);
+    if (returnFocus) menuButton.focus();
+  }
+  menuButton.addEventListener('click', () => {
+    const open = menu.classList.toggle('is-open');
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? '收起导航' : '展开导航');
+  });
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeMenu()));
+  document.addEventListener('click', event => { if (!nav.contains(event.target)) closeMenu(); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu.classList.contains('is-open')) closeMenu(true);
+  });
+  matchMedia('(max-width:900px)').addEventListener('change', () => closeMenu());
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const toggle = document.getElementById('motion-toggle');
   let paused = reduced.matches;
@@ -29,7 +51,7 @@
   }, { passive: true });
   const progress = document.querySelector('.reading-progress');
   const chapters = [...document.querySelectorAll('.chapter')];
-  const links = [...document.querySelectorAll('.chapter-nav a')];
+  const links = [...document.querySelectorAll('.chapter-nav a, .journey-links a')];
   let scheduled = false;
   function updateScroll() {
     scheduled = false;
@@ -59,3 +81,12 @@
     observer.observe(count);
   }
 })();
+
+// 原生折叠菜单支持点击与键盘；鼠标悬停时展开桌面目录。
+document.querySelectorAll('.journey-menu').forEach(menu => {
+  const hover = matchMedia('(hover:hover) and (min-width:901px)');
+  menu.addEventListener('pointerenter', () => { if (hover.matches) menu.open = true; });
+  menu.addEventListener('pointerleave', () => { if (hover.matches && !menu.contains(document.activeElement)) menu.open = false; });
+  menu.addEventListener('focusout', event => { if (!menu.contains(event.relatedTarget)) menu.open = false; });
+  menu.addEventListener('keydown', event => { if (event.key === 'Escape') { menu.open = false; menu.querySelector('summary').focus(); } });
+});

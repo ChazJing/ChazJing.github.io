@@ -113,3 +113,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// 原生折叠菜单支持点击与键盘；鼠标悬停时展开桌面目录。
+document.querySelectorAll('.journey-menu').forEach(menu => {
+  const hover = matchMedia('(hover:hover) and (min-width:769px)');
+  menu.addEventListener('pointerenter', () => { if (hover.matches) menu.open = true; });
+  menu.addEventListener('pointerleave', () => { if (hover.matches && !menu.contains(document.activeElement)) menu.open = false; });
+  menu.addEventListener('focusout', event => { if (!menu.contains(event.relatedTarget)) menu.open = false; });
+  menu.addEventListener('keydown', event => { if (event.key === 'Escape') { menu.open = false; menu.querySelector('summary').focus(); } });
+});

@@ -11,7 +11,12 @@
         
         <ul class="nav-menu" id="nav-menu">
             <li><button id="dark-mode-toggle" class="dark-mode-btn">黑夜模式：关</button></li>
-            <li><a href="{{ "/" | relative_url }}">个人经历</a></li>
+            <li><details class="journey-menu"><summary>个人经历 <span aria-hidden="true">⌄</span></summary><div class="journey-links" aria-label="个人经历章节"><a href="{{ '/' | relative_url }}#intro"><span>基本信息</span></a>
+<a href="{{ '/' | relative_url }}#education"><span>教育经历</span></a>
+<a href="{{ '/' | relative_url }}#practice"><span>实习实践</span></a>
+<a href="{{ '/' | relative_url }}#campus"><span>校园经历</span></a>
+<a href="{{ '/' | relative_url }}#honors"><span>所获荣誉</span></a>
+<a href="{{ '/' | relative_url }}#contact"><span>个人评价</span></a></div></details></li>
             <li><a href="{{ "/about" | relative_url }}"{% if page.section == 'literature' or page.layout == 'post' %} aria-current="true"{% endif %}>文学作品集</a></li>
         </ul>
     </div>
