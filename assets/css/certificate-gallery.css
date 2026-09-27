@@ -30,3 +30,13 @@ body.certificate-viewer-open{overflow:hidden}
 @media(max-width:600px){.certificate-gallery{margin-top:42px;padding-top:28px}.certificate-gallery-heading{align-items:flex-start;flex-direction:column;gap:18px}.certificate-controls{align-self:flex-end}.certificate-track{gap:14px}.certificate-card{flex-basis:86%}.certificate-image-frame{padding:15px}.certificate-card figcaption{padding:15px;min-height:122px}.certificate-enlarge{opacity:1}.certificate-dialog{width:96vw;max-width:96vw;height:96svh;max-height:96svh;border-radius:8px}.certificate-dialog-header{padding:12px;gap:8px}.certificate-dialog-header h3{font-size:16px}.certificate-dialog-toolbar{gap:6px;padding:8px}.certificate-dialog button,.certificate-dialog-toolbar a{padding:8px 10px;font-size:12px}.certificate-image-stage{padding:8px}.certificate-hint{line-height:1.9}}
 @media(prefers-reduced-motion:reduce){.certificate-card,.certificate-enlarge{transition:none}}
 @media print{.certificate-gallery,.certificate-dialog{display:none}}
+/* 荣誉栏内嵌证书轮播 */
+.honors-grid .certificate-gallery{margin-top:2.25rem;padding-top:0;border-top:0;min-width:0}
+.honors-grid .certificate-track{display:flex;overflow:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;border:0;padding:0;background:transparent}
+.honors-grid .certificate-track::-webkit-scrollbar{display:none}
+.honors-grid .certificate-card{flex:0 0 100%;display:block;scroll-snap-align:start;border:0;background:transparent;box-shadow:none;padding:0}
+.honors-grid .certificate-image-frame{display:block;aspect-ratio:4/5;padding:.5rem;background:transparent}
+.honors-grid .certificate-image-frame img{width:100%;height:100%;object-fit:contain;display:block}
+.honors-grid .certificate-open{display:block}
+@media (max-width:700px){.honors-grid .certificate-gallery{margin-top:1.5rem}.honors-grid .certificate-image-frame{aspect-ratio:4/5}}
+

@@ -20,30 +20,28 @@
   function show(next, announce = false) {
     index = (next + cards.length) % cards.length;
     track.scrollTo({left: Math.max(0, position(cards[index])), behavior: motionPaused() ? 'auto' : 'smooth'});
-    status.textContent = `${index + 1} / ${cards.length}`;
-    if (announce) announcement.textContent = `${index + 1} / ${cards.length}，${links[index].dataset.title}`;
+    if (status) status.textContent = `${index + 1} / ${cards.length}`;
+    if (announce && announcement) announcement.textContent = `${index + 1} / ${cards.length}，${links[index].dataset.title}`;
   }
   function refreshTimer() {
     clearTimeout(timer);
     const paused = userPaused || motionPaused();
-    play.textContent = motionPaused() ? '动效已暂停' : paused ? '播放轮播' : '暂停轮播';
-    play.disabled = motionPaused();
-    play.setAttribute('aria-pressed', String(paused));
+    if (play) { play.textContent = motionPaused() ? '动效已暂停' : paused ? '播放轮播' : '暂停轮播'; play.disabled = motionPaused(); play.setAttribute('aria-pressed', String(paused)); }
     if (!paused && visible && !hovering && !focused && !dialog.open && !document.hidden && !drag) {
       timer = setTimeout(() => {
         const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 5;
         show(atEnd ? 0 : index + 1);
         refreshTimer();
-      }, 5500);
+      }, 1000);
     }
   }
   function manual(next) { userPaused = true; show(next, true); refreshTimer(); }
-  gallery.querySelector('[data-gallery-prev]').addEventListener('click', () => manual(index - 1));
-  gallery.querySelector('[data-gallery-next]').addEventListener('click', () => manual(track.scrollLeft >= track.scrollWidth - track.clientWidth - 5 ? 0 : index + 1));
-  play.addEventListener('click', () => {
+  gallery.querySelector('[data-gallery-prev]')?.addEventListener('click', () => manual(index - 1));
+  gallery.querySelector('[data-gallery-next]')?.addEventListener('click', () => manual(track.scrollLeft >= track.scrollWidth - track.clientWidth - 5 ? 0 : index + 1));
+  play?.addEventListener('click', () => {
     if (motionPaused()) {
       userPaused = true;
-      announcement.textContent = '全站动效或系统减少动态效果已开启，可继续手动翻阅证书。';
+      if (announcement) announcement.textContent = '全站动效或系统减少动态效果已开启，可继续手动翻阅证书。';
     } else userPaused = !userPaused;
     refreshTimer();
   });
@@ -53,7 +51,7 @@
     scrollFrame = requestAnimationFrame(() => {
       let nearest = 0, distance = Infinity;
       cards.forEach((card, i) => { const delta = Math.abs(position(card) - track.scrollLeft); if (delta < distance) { distance = delta; nearest = i; } });
-      index = nearest;status.textContent = `${index + 1} / ${cards.length}`;
+      index = nearest;if (status) status.textContent = `${index + 1} / ${cards.length}`;
     });
   }, {passive: true});
   track.addEventListener('keydown', event => {
@@ -118,3 +116,4 @@
   zoom.addEventListener('click', toggleZoom);image.addEventListener('click', toggleZoom);
   refreshTimer();
 })();
+

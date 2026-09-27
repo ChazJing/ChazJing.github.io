@@ -32,8 +32,7 @@ title: 郑时景 · 个人经历
   </div>
 </section>
 <section class="chapter ink honors-section" id="honors" aria-labelledby="honors-title">
-  <div class="chapter-inner honors-grid"><header class="section-heading reveal"><p class="eyebrow">05 / RECOGNITION</p><h2 id="honors-title">所获荣誉</h2><p class="section-subtitle">每一份认可，都是来路的回声。</p><p>感谢被看见的努力，也珍惜与团队共同完成的事情。</p><span class="honors-mark" aria-hidden="true">✳</span></header><div class="honor-list">{% for item in site.data.resume.honors %}<article class="honor-item reveal"><span class="honor-year">{{ item.year }}</span><div><span class="honor-type">{{ item.type }}</span><h3>{{ item.text }}</h3></div></article>{% endfor %}</div></div>
-  <div class="chapter-inner">{% include certificate-gallery.html %}</div>
+  <div class="chapter-inner honors-grid"><header class="section-heading reveal"><p class="eyebrow">05 / RECOGNITION</p><h2 id="honors-title">所获荣誉</h2><p class="section-subtitle">每一份认可，都是来路的回声。</p><p>感谢被看见的努力，也珍惜与团队共同完成的事情。</p>{% include certificate-gallery.html %}</header><div class="honor-list">{% for item in site.data.resume.honors %}<article class="honor-item reveal"><span class="honor-year">{{ item.year }}</span><div><span class="honor-type">{{ item.type }}</span><h3>{{ item.text }}</h3></div></article>{% endfor %}</div></div>
 </section>
 <section class="chapter paper" id="contact" aria-labelledby="contact-title">
   <div class="chapter-inner">
@@ -43,3 +42,4 @@ title: 郑时景 · 个人经历
     <footer class="resume-footer"><span>© {{ site.time | date: '%Y' }} 郑时景 · ChazJing</span><a href="#intro">回到开篇 ↑</a></footer>
   </div>
 </section>
+
