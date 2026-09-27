@@ -16,13 +16,13 @@ permalink: /about
                 <p class="collection-eyebrow">CHAZJING · 文字与生活</p>
                 <h1>文学作品集</h1>
                 <p class="collection-intro">欢迎来到我的小窝。在这里，记录走过的路，留住生活、回忆与偶然的心绪。</p>
-                <p class="bio">偶尔喜欢写文字，网易云重度选手。｜<a href="https://web.chazjing.icu/" target="_blank">https://web.chazjing.icu/</a></p>
+                <p class="bio">喜欢用文字记录生活，公众号“Chaz Jing”时不时更新原创作品。网易云重度选手。｜<a href="https://web.chazjing.icu/" target="_blank">https://web.chazjing.icu/</a></p>
 
                 <div class="contact-links">
                     <h3>联系方式</h3>
                     <ul>
                         <li>📧 邮箱：<a href="mailto:zhengshijing@zju.edu.cn">zhengshijing@zju.edu.cn</a></li>
-                        <li>公众号：Chaz Jing</li>
+                        <li>公众号：Chaz Jing<br><span>截至 2026 年 9 月底，已写下 65 篇原创。</span><img src="{{ '/assets/images/wechat-qr.webp' | relative_url }}" alt="公众号 Chaz Jing 二维码" width="160" height="160" loading="lazy" style="display:block;width:160px;height:auto;max-width:100%;margin-top:12px;background:#fff;"></li>
                     </ul>
                 </div>
             </div>
