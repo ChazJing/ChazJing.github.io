@@ -1,0 +1,29 @@
+<section class="certificate-gallery" aria-labelledby="certificates-title" aria-roledescription="轮播" data-certificate-gallery>
+  <header class="certificate-gallery-heading">
+    <div><p class="eyebrow">MOMENTS OF RECOGNITION</p><h3 id="certificates-title">荣誉留影</h3><p class="certificate-hint">左右滑动，翻阅一路的收获。点击证书，可查看大图。</p></div>
+    <div class="certificate-controls" aria-label="证书轮播控制">
+      <button type="button" data-gallery-prev aria-label="上一张证书" aria-controls="certificate-track">←</button>
+      <button type="button" data-gallery-play aria-pressed="false">暂停轮播</button>
+      <button type="button" data-gallery-next aria-label="下一张证书" aria-controls="certificate-track">→</button>
+    </div>
+  </header>
+  <div class="certificate-track" id="certificate-track" tabindex="0" aria-label="证书列表，可左右滑动或使用方向键">
+    {% for certificate in site.data.certificates %}
+    <figure class="certificate-card" data-certificate>
+      <a class="certificate-open" href="{{ certificate.image | relative_url }}" target="_blank" rel="noopener" data-title="{{ certificate.title | escape }}" data-period="{{ certificate.period | escape }}" data-kind="{{ certificate.kind | escape }}" aria-label="查看{{ certificate.period }}{{ certificate.title }}大图">
+        <span class="certificate-image-frame"><img src="{{ certificate.thumbnail | relative_url }}" alt="{{ certificate.period }} · {{ certificate.title }}" width="{{ certificate.width }}" height="{{ certificate.height }}" loading="lazy" decoding="async" draggable="false"><span class="certificate-enlarge" aria-hidden="true">查看大图 ↗</span></span>
+      </a>
+      <figcaption><p class="certificate-period">{{ certificate.period }} · {{ certificate.kind }}</p><h4>{{ certificate.title }}</h4><span class="certificate-sequence" aria-hidden="true">{{ forloop.index }} / {{ site.data.certificates.size }}</span></figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+  <div class="certificate-gallery-footer"><span>共 {{ site.data.certificates.size }} 份证书</span><span data-gallery-status aria-live="off">1 / {{ site.data.certificates.size }}</span></div>
+  <p class="certificate-sr-only" data-gallery-announcement aria-live="polite"></p>
+</section>
+<dialog class="certificate-dialog" aria-labelledby="certificate-dialog-title">
+  <div class="certificate-dialog-shell">
+    <header class="certificate-dialog-header"><div><p id="certificate-dialog-meta"></p><h3 id="certificate-dialog-title">证书大图</h3></div><button type="button" data-viewer-close aria-label="关闭证书大图">关闭 ×</button></header>
+    <div class="certificate-dialog-toolbar"><button type="button" data-viewer-prev aria-label="查看上一张证书">← 上一张</button><span data-viewer-count aria-live="polite"></span><button type="button" data-viewer-next aria-label="查看下一张证书">下一张 →</button><button type="button" data-viewer-zoom aria-pressed="false">放大细看</button><a data-viewer-original target="_blank" rel="noopener">打开原尺寸图片 ↗</a></div>
+    <div class="certificate-image-stage" tabindex="0" aria-label="证书大图，放大后可滚动查看"><img data-viewer-image alt="" draggable="false"></div>
+  </div>
+</dialog>
