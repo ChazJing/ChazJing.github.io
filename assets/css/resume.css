@@ -38,3 +38,27 @@ html:not(.js-nav) .resume-nav>.resume-menu{display:flex;position:static;flex-bas
 
 @media print{.resume-nav,.chapter-nav,.ambient,.pointer-light,.reading-progress,#motion-toggle,.hero-landscape,.hero-bottom{display:none}.chapter{min-height:auto;background:white;color:black;padding:25px 0}.chapter-inner{width:100%}.reveal{opacity:1!important;transform:none!important}.practice-item{break-inside:avoid}.hero-copy,.section-heading>p:last-child,.practice-body>p,.date{color:#333!important}}
 
+
+/* 校园照片作为衬底，正文始终位于蒙版之上。 */
+.chapter-photo{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.chapter-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.chapter-photo::after{content:'';position:absolute;inset:0}
+.hero-photo img{object-position:62% center}
+.hero-photo::after{background:linear-gradient(90deg,rgba(13,31,27,.92),rgba(13,31,27,.72) 55%,rgba(13,31,27,.46)),linear-gradient(0deg,#112522,transparent 35%)}
+.paper-photo img{object-position:center;filter:saturate(.55)}
+.paper-photo::after{background:rgba(238,234,224,.94)}
+#education>.chapter-inner,#contact>.chapter-inner,.hero-bottom{position:relative;z-index:1}
+.hero-bottom{position:absolute}
+.practice-item.has-photos{grid-template-columns:80px minmax(0,1fr) minmax(0,.85fr);gap:24px;align-items:start}
+.practice-item.has-photos .practice-number{border-right:0;min-width:0}
+.practice-item.has-photos .practice-number strong{font-size:40px;overflow-wrap:anywhere}
+.practice-item.has-photos .practice-number span{letter-spacing:0;font-size:10px}
+.experience-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;align-self:center;min-width:0;width:100%;max-width:340px;justify-self:end}
+.experience-photos a{display:block;min-width:0;border-radius:6px;overflow:hidden}
+.experience-photos img{display:block;width:100%;height:auto;border-radius:6px}
+.campus-item.has-photos{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:36px;align-items:center}
+.campus-copy>p:not(.date):not(.role){font-size:14px;color:#58665a}
+.honors-grid>.section-heading{min-width:0}
+@media(max-width:900px){.practice-item.has-photos{grid-template-columns:80px minmax(0,1fr)}.practice-item.has-photos .experience-photos{grid-column:2;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}.campus-item.has-photos{gap:24px}}
+@media(max-width:600px){.hero-photo img{object-position:center}.hero-photo::after{background:linear-gradient(0deg,rgba(13,31,27,.94),rgba(13,31,27,.73) 70%,rgba(13,31,27,.55))}.paper-photo::after{background:rgba(238,234,224,.96)}.practice-item.has-photos,.campus-item.has-photos{grid-template-columns:minmax(0,1fr);gap:22px}.practice-item.has-photos .experience-photos{grid-column:auto;grid-template-columns:minmax(0,1fr)}.practice-item.has-photos .practice-number{align-items:baseline}.practice-item.has-photos .practice-number strong{font-size:49px}}
+@media print{.chapter-photo{display:none}.experience-photos{max-width:300px}.practice-item.has-photos,.campus-item.has-photos{break-inside:avoid}}
